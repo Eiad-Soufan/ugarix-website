@@ -188,13 +188,37 @@ function App() {
           </div>
         </section>
 
-        <section className="trusted section section--compact">
-          <div className="container trusted-heading">
-            <span className="eyebrow"><i />{t.trusted.eyebrow}</span><h2>{t.trusted.title}</h2>
-          </div>
-          <div className="marquee" aria-label={t.trusted.title}>
-            <div className="marquee-track">
-              {[...t.trusted.names, ...t.trusted.names].map((name, index) => <span key={`${name}-${index}`}><i />{name}</span>)}
+        <section className="trusted section">
+          <div className="trust-atmosphere" aria-hidden="true"><i /><i /><i /></div>
+          <div className="container">
+            <Reveal className="trusted-heading">
+              <div>
+                <span className="eyebrow"><i />{t.trusted.eyebrow}</span>
+                <h2>{t.trusted.title}</h2>
+                <p>{t.trusted.intro}</p>
+              </div>
+              <span className="trust-signal mono"><i />{t.trusted.signal}<b>05</b></span>
+            </Reveal>
+
+            <div className="trust-grid">
+              {t.trusted.items.map((item, index) => (
+                <Reveal className={`trust-card trust-card--${item.tone}`} delay={index * 0.06} key={item.name}>
+                  <article>
+                    <div className="trust-card-top">
+                      <span className="mono">UG / {item.number}</span>
+                      <span className="trust-live"><i />VERIFIED</span>
+                    </div>
+                    <div className="trust-logo-stage">
+                      <span className="trust-orbit" aria-hidden="true" />
+                      <div className="trust-logo-crop"><img src={item.logo} alt={`${item.name} logo`} /></div>
+                    </div>
+                    <div className="trust-card-bottom">
+                      <div><span>{item.sector}</span><h3>{item.name}</h3></div>
+                      <span className="mono">0{index + 1} / 05</span>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>

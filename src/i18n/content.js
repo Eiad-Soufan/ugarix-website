@@ -64,7 +64,19 @@ export const content = {
         { number: '04', name: 'Yallah Baggage', type: 'Travel logistics platform', description: 'منصة تربط المسافرين باحتياجات نقل الأمتعة عبر تجربة رقمية واضحة وسريعة.', url: 'https://yalla-baggage.vercel.app', color: 'violet', mark: 'YB' },
       ],
     },
-    trusted: { eyebrow: 'جهات عمل معها فريقنا', title: 'ثقة نعتز بها', names: ['MTN Syria', 'Dubai International Airport', 'Arabica', 'Al Baraka', 'SCIM Malaysia'] },
+    trusted: {
+      eyebrow: 'جهات عمل معها فريقنا',
+      title: 'ثقة نعتز بها.',
+      intro: 'خبرات وشراكات عبر قطاعات تتطلب الدقة والاستمرارية — من الاتصالات والطيران إلى التجارة والمجتمع والضيافة.',
+      signal: 'شبكة الثقة',
+      items: [
+        { number: '01', name: 'MTN سوريا', sector: 'الاتصالات', logo: '/clients/mtn-syria.png', tone: 'yellow' },
+        { number: '02', name: 'مطار دبي الدولي', sector: 'الطيران', logo: '/clients/dubai-airport.png', tone: 'red' },
+        { number: '03', name: 'المبادرة المجتمعية السورية', sector: 'المجتمع', logo: '/clients/syrian-community-initiative.png', tone: 'blue' },
+        { number: '04', name: 'بركات المدينة', sector: 'التجارة', logo: '/clients/berkat-madinah.png', tone: 'green' },
+        { number: '05', name: 'أرابيكا', sector: 'الضيافة', logo: '/clients/arabica.png', tone: 'orange' },
+      ],
+    },
     process: {
       eyebrow: 'كيف نعمل',
       title: 'وضوح قبل الكود، وانضباط حتى ما بعد الإطلاق.',
@@ -175,7 +187,19 @@ export const content = {
         { number: '04', name: 'Yallah Baggage', type: 'Travel logistics platform', description: 'A platform connecting travelers with baggage transport needs through a simple, fast journey.', url: 'https://yalla-baggage.vercel.app', color: 'violet', mark: 'YB' },
       ],
     },
-    trusted: { eyebrow: 'Organizations our team has worked with', title: 'Trust we value', names: ['MTN Syria', 'Dubai International Airport', 'Arabica', 'Al Baraka', 'SCIM Malaysia'] },
+    trusted: {
+      eyebrow: 'Organizations our team has worked with',
+      title: 'Trust we value.',
+      intro: 'Experience and partnerships across sectors where precision and continuity matter — from telecom and aviation to commerce, community, and hospitality.',
+      signal: 'Trust network',
+      items: [
+        { number: '01', name: 'MTN Syria', sector: 'Telecommunications', logo: '/clients/mtn-syria.png', tone: 'yellow' },
+        { number: '02', name: 'Dubai International Airport', sector: 'Aviation', logo: '/clients/dubai-airport.png', tone: 'red' },
+        { number: '03', name: 'Syrian Community Initiative', sector: 'Community', logo: '/clients/syrian-community-initiative.png', tone: 'blue' },
+        { number: '04', name: 'Berkat Madinah', sector: 'Commerce', logo: '/clients/berkat-madinah.png', tone: 'green' },
+        { number: '05', name: 'Arabica', sector: 'Hospitality', logo: '/clients/arabica.png', tone: 'orange' },
+      ],
+    },
     process: {
       eyebrow: 'How we work',
       title: 'Clarity before code. Discipline beyond launch.',
