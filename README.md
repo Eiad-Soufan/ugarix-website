@@ -11,7 +11,7 @@ An immersive dark-theme React experience built around the Ugarix brand idea: **E
 - Original animated system-core hero built with CSS, SVG, and Framer Motion
 - Brand fonts and identity assets served locally
 - Accessible navigation, keyboard focus states, reduced-motion support, and semantic structure
-- Company story, capabilities, selected work, method, principles, disciplines, and project inquiry
+- Company story, services, selected work, method, principles, disciplines, and project inquiry
 - Netlify-ready contact form, redirects, and production configuration
 - SEO metadata and Organization structured data
 

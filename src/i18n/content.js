@@ -9,7 +9,7 @@ export const content = {
     nav: [
       ['الرئيسية', 'home'],
       ['قصتنا', 'story'],
-      ['قدراتنا', 'services'],
+      ['خدماتنا', 'services'],
       ['أعمالنا', 'work'],
       ['منهجنا', 'process'],
     ],
@@ -43,7 +43,7 @@ export const content = {
     },
     services: {
       eyebrow: 'ما الذي نهندسه',
-      title: 'قدرات مترابطة لمنتجات تُبنى بثقة.',
+      title: 'خدمات متكاملة لمنتجات تُبنى بثقة.',
       intro: 'قرار واحد يجمع الهندسة والذكاء الاصطناعي والأعمال والتصميم — من أول مخطط حتى الاستقرار التشغيلي.',
       items: [
         { icon: 'building', number: '01', title: 'الأنظمة المؤسسية والتحول الرقمي', text: 'بنى موثوقة للعمليات الحساسة، والبيانات المعقدة، والامتثال، والتكاملات واسعة النطاق.', tags: ['Enterprise', 'Security', 'Scale'] },
@@ -135,7 +135,7 @@ export const content = {
     languageLabel: 'التبديل إلى العربية',
     menuLabel: 'Open menu',
     closeMenuLabel: 'Close menu',
-    nav: [['Home', 'home'], ['Our story', 'story'], ['Capabilities', 'services'], ['Work', 'work'], ['Method', 'process']],
+    nav: [['Home', 'home'], ['Our story', 'story'], ['Services', 'services'], ['Work', 'work'], ['Method', 'process']],
     contactCta: 'Start a project',
     hero: {
       eyebrow: 'Damascus, Syria — built for the world',
@@ -166,7 +166,7 @@ export const content = {
     },
     services: {
       eyebrow: 'What we engineer',
-      title: 'Connected capabilities for products built with confidence.',
+      title: 'Integrated services for products built with confidence.',
       intro: 'One team brings engineering, AI, business, and design together — from the first blueprint to operational stability.',
       items: [
         { icon: 'building', number: '01', title: 'Enterprise systems & transformation', text: 'Dependable foundations for critical operations, complex data, compliance, and large-scale integrations.', tags: ['Enterprise', 'Security', 'Scale'] },
