@@ -2876,7 +2876,7 @@ html[dir='rtl'] .form-wrap label > span { font-size: 0.82rem; }
   .footer::after { background: linear-gradient(180deg, rgba(2, 7, 6, 0.75), rgba(2, 7, 6, 0.2) 48%, rgba(2, 7, 6, 0.76)); }
   .footer-top { min-height: 0; padding-block: 58px 52px; text-align: center; grid-template-columns: 1fr; }
   .footer-top img, .footer-top > a { justify-self: center; }
-  .footer-top p { max-width: 290px; }
+  .footer-top p { width: 100%; max-width: 290px; justify-self: center; text-align: center; }
   .footer-bottom { gap: 13px; align-items: center; flex-direction: column; text-align: center; }
 }
 
