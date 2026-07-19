@@ -56,10 +56,10 @@ export const content = {
       intro: 'نماذج من منتجات ومنصات صنعها أعضاء فريقنا لقطاعات القانون والمطاعم والتجارة والخدمات.',
       view: 'زيارة المشروع',
       items: [
-        { number: '01', name: 'LAWNEX', type: 'Legal technology platform', description: 'منصة قانونية رقمية تجمع المعرفة والخدمات والذكاء الاصطناعي في منظومة واحدة.', features: ['بحث قانوني مدعوم بالذكاء', 'إدارة ملفات ومكتب رقمي', 'اشتراكات وصلاحيات مرنة'], tags: ['Django', 'AI', 'Flutter'], url: 'https://lawnex.app', color: 'green' },
-        { number: '02', name: 'Arabica', type: 'Restaurant digital experience', description: 'منصة حضور وتجربة رقمية لمطعم أرابيكا في ماليزيا، مصممة للوضوح وسهولة الوصول.', features: ['قوائم ومنتجات ديناميكية', 'تجربة متعددة اللغات', 'عروض وأسعار مرنة'], tags: ['Django', 'React', 'PostgreSQL'], url: 'https://arabicarestaurant.my', color: 'orange' },
-        { number: '03', name: 'Madinah Dates', type: 'Commerce campaign platform', description: 'صفحة تسويقية مركّزة لمنتجات التمور، تربط القصة بالمنتج والتحويل التجاري.', features: ['سرد بصري للعلامة', 'عرض واضح للمنتجات', 'تجربة متجاوبة وسريعة'], tags: ['Brand', 'Web', 'Campaign'], url: 'https://dates.madinah.com.my', color: 'blue' },
-        { number: '04', name: 'Yallah Baggage', type: 'Travel logistics platform', description: 'منصة تربط المسافرين باحتياجات نقل الأمتعة عبر تجربة رقمية واضحة وسريعة.', features: ['طلبات نقل منظّمة', 'ربط المسافرين بالطلبات', 'متابعة واضحة للحالة'], tags: ['Travel', 'Web', 'Logistics'], url: 'https://yalla-baggage.vercel.app', color: 'violet' },
+        { number: '01', name: 'LAWNEX', type: 'Legal technology platform', description: 'منصة قانونية رقمية تجمع المعرفة والخدمات والذكاء الاصطناعي في منظومة واحدة.', features: ['بحث قانوني مدعوم بالذكاء', 'إدارة ملفات ومكتب رقمي', 'اشتراكات وصلاحيات مرنة'], url: 'https://lawnex.app', color: 'green' },
+        { number: '02', name: 'Arabica', type: 'Restaurant digital experience', description: 'منصة حضور وتجربة رقمية لمطعم أرابيكا في ماليزيا، مصممة للوضوح وسهولة الوصول.', features: ['قوائم ومنتجات ديناميكية', 'تجربة متعددة اللغات', 'عروض وأسعار مرنة'], url: 'https://arabicarestaurant.my', color: 'orange' },
+        { number: '03', name: 'Madinah Dates', type: 'Commerce campaign platform', description: 'صفحة تسويقية مركّزة لمنتجات التمور، تربط القصة بالمنتج والتحويل التجاري.', features: ['سرد بصري للعلامة', 'عرض واضح للمنتجات', 'تجربة متجاوبة وسريعة'], url: 'https://dates.madinah.com.my', color: 'blue' },
+        { number: '04', name: 'Yallah Baggage', type: 'Travel logistics platform', description: 'منصة تربط المسافرين باحتياجات نقل الأمتعة عبر تجربة رقمية واضحة وسريعة.', features: ['طلبات نقل منظّمة', 'ربط المسافرين بالطلبات', 'متابعة واضحة للحالة'], url: 'https://yalla-baggage.vercel.app', color: 'violet' },
       ],
     },
     trusted: {
@@ -177,10 +177,10 @@ export const content = {
       intro: 'A selection of products and platforms built by our team across legal, restaurants, commerce, and services.',
       view: 'Visit project',
       items: [
-        { number: '01', name: 'LAWNEX', type: 'Legal technology platform', description: 'A legal digital platform bringing knowledge, services, and AI into one connected system.', features: ['AI-assisted legal research', 'Digital files and office', 'Flexible plans and access'], tags: ['Django', 'AI', 'Flutter'], url: 'https://lawnex.app', color: 'green' },
-        { number: '02', name: 'Arabica', type: 'Restaurant digital experience', description: 'A clear and accessible digital presence for Arabica Restaurant in Malaysia.', features: ['Dynamic menus and products', 'Multilingual experience', 'Flexible offers and pricing'], tags: ['Django', 'React', 'PostgreSQL'], url: 'https://arabicarestaurant.my', color: 'orange' },
-        { number: '03', name: 'Madinah Dates', type: 'Commerce campaign platform', description: 'A focused marketing experience connecting product story with commercial conversion.', features: ['Visual brand storytelling', 'Clear product presentation', 'Fast responsive experience'], tags: ['Brand', 'Web', 'Campaign'], url: 'https://dates.madinah.com.my', color: 'blue' },
-        { number: '04', name: 'Yallah Baggage', type: 'Travel logistics platform', description: 'A platform connecting travelers with baggage transport needs through a simple, fast journey.', features: ['Structured transport requests', 'Traveler-request matching', 'Clear status tracking'], tags: ['Travel', 'Web', 'Logistics'], url: 'https://yalla-baggage.vercel.app', color: 'violet' },
+        { number: '01', name: 'LAWNEX', type: 'Legal technology platform', description: 'A legal digital platform bringing knowledge, services, and AI into one connected system.', features: ['AI-assisted legal research', 'Digital files and office', 'Flexible plans and access'], url: 'https://lawnex.app', color: 'green' },
+        { number: '02', name: 'Arabica', type: 'Restaurant digital experience', description: 'A clear and accessible digital presence for Arabica Restaurant in Malaysia.', features: ['Dynamic menus and products', 'Multilingual experience', 'Flexible offers and pricing'], url: 'https://arabicarestaurant.my', color: 'orange' },
+        { number: '03', name: 'Madinah Dates', type: 'Commerce campaign platform', description: 'A focused marketing experience connecting product story with commercial conversion.', features: ['Visual brand storytelling', 'Clear product presentation', 'Fast responsive experience'], url: 'https://dates.madinah.com.my', color: 'blue' },
+        { number: '04', name: 'Yallah Baggage', type: 'Travel logistics platform', description: 'A platform connecting travelers with baggage transport needs through a simple, fast journey.', features: ['Structured transport requests', 'Traveler-request matching', 'Clear status tracking'], url: 'https://yalla-baggage.vercel.app', color: 'violet' },
       ],
     },
     trusted: {

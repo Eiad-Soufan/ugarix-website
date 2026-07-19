@@ -231,7 +231,6 @@ function App() {
                       <ul className="project-features">
                         {project.features.map(feature => <li key={feature}><Check />{feature}</li>)}
                       </ul>
-                      <div className="project-tags">{project.tags.map(tag => <span className="mono" key={tag}>{tag}</span>)}</div>
                       <div className="project-link"><span>{t.work.view}</span><ExternalLink /></div>
                     </a>
                   </Reveal>
