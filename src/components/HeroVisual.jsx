@@ -44,8 +44,6 @@ export default function HeroVisual({ t }) {
       <div className="core-shell">
         <div className="core-scan" />
         <div className="core-mark"><img src="/brand/ugarix-mark.svg" alt="" /></div>
-        <span className="core-label mono">{t.core}</span>
-        <span className="core-status"><i />{t.online}</span>
       </div>
 
       {t.signals.map((signal, index) => (

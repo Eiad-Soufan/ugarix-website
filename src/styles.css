@@ -895,39 +895,6 @@ html[dir='rtl'] .network-node {
   filter: drop-shadow(0 0 22px rgba(3, 218, 151, 0.15));
 }
 
-.core-label,
-.core-status {
-  position: absolute;
-  z-index: 3;
-  font-size: 0.54rem;
-  transform: rotate(-45deg);
-}
-
-.core-label {
-  inset-block-start: 16px;
-  inset-inline-start: 19px;
-  color: var(--faint);
-  text-transform: uppercase;
-}
-
-.core-status {
-  inset-block-end: 16px;
-  inset-inline-end: 18px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: var(--green-soft);
-}
-
-.core-status i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 8px var(--green);
-  animation: status-blink 1.8s ease-in-out infinite;
-}
-
 @keyframes status-blink { 50% { opacity: 0.35; } }
 
 .core-scan {

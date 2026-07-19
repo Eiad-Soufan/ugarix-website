@@ -22,8 +22,6 @@ export const content = {
       primary: 'ابدأ مشروعك معنا',
       secondary: 'اكتشف منهجنا',
       scroll: 'استكشف أوغاريكس',
-      core: 'نواة النظام',
-      online: 'منظومة حيّة',
       signals: ['معمارية', 'أمان', 'ذكاء', 'توسّع'],
     },
     stats: [
@@ -145,8 +143,6 @@ export const content = {
       primary: 'Build with Ugarix',
       secondary: 'Explore our method',
       scroll: 'Discover Ugarix',
-      core: 'System core',
-      online: 'System online',
       signals: ['Architecture', 'Security', 'Intelligence', 'Scale'],
     },
     stats: [
