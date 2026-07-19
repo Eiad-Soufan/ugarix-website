@@ -4,26 +4,22 @@ import {
   ArrowDown,
   ArrowUp,
   ArrowUpRight,
-  Boxes,
-  BrainCircuit,
-  Building2,
   ExternalLink,
   Mail,
   MapPin,
   Phone,
-  Smartphone,
 } from 'lucide-react';
 import Header from './components/Header';
 import HeroVisual from './components/HeroVisual';
 import { Reveal, SectionHeading } from './components/Reveal';
 import { content } from './i18n/content';
 
-const iconMap = {
-  building: Building2,
-  boxes: Boxes,
-  brain: BrainCircuit,
-  mobile: Smartphone,
-};
+const serviceVisuals = [
+  '/services/enterprise-systems.webp',
+  '/services/digital-products.webp',
+  '/services/ai-automation.webp',
+  '/services/web-mobile-platforms.webp',
+];
 
 const disciplineVisuals = [
   '/disciplines/engineering.webp',
@@ -151,17 +147,28 @@ function App() {
           <div className="container">
             <SectionHeading eyebrow={t.services.eyebrow} title={t.services.title} intro={t.services.intro} />
             <div className="services-grid">
-              {t.services.items.map((service, index) => {
-                const Icon = iconMap[service.icon];
-                return (
-                  <Reveal className="service-card" delay={index * 0.07} key={service.title}>
-                    <div className="service-top"><span className="service-number mono">{service.number}</span><span className="service-icon"><Icon /></span></div>
-                    <h3>{service.title}</h3><p>{service.text}</p>
-                    <div className="tag-row">{service.tags.map(tag => <span className="mono" key={tag}>{tag}</span>)}</div>
-                    <div className="card-corner" aria-hidden="true" />
-                  </Reveal>
-                );
-              })}
+              {t.services.items.map((service, index) => (
+                <Reveal className={`service-card service-card--${index + 1}`} delay={index * 0.07} key={service.title}>
+                  <article>
+                    <div className="service-card-head">
+                      <span className="service-status mono"><i />UG / SERVICE / {service.number}</span>
+                      <span className="service-number mono">{service.number}</span>
+                    </div>
+                    <span className="service-ghost-number mono" aria-hidden="true">{service.number}</span>
+                    <div className="service-card-layout">
+                      <div className="service-visual" aria-hidden="true">
+                        <span className="service-orbit" />
+                        <img src={serviceVisuals[index]} alt="" loading="lazy" decoding="async" />
+                      </div>
+                      <div className="service-copy">
+                        <h3>{service.title}</h3>
+                        <p>{service.text}</p>
+                        <div className="tag-row">{service.tags.map(tag => <span className="mono" key={tag}>{tag}</span>)}</div>
+                      </div>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>
@@ -254,7 +261,7 @@ function App() {
         </section>
 
         <section className="disciplines section">
-          <div className="disciplines-atmosphere" aria-hidden="true"><i /><i /><i /></div>
+          <div className="disciplines-atmosphere" aria-hidden="true"><i /></div>
           <div className="container">
             <div className="disciplines-head">
               <SectionHeading eyebrow={t.disciplines.eyebrow} title={t.disciplines.title} intro={t.disciplines.intro} />
