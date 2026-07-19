@@ -1,12 +1,12 @@
 import { motion as Motion } from 'framer-motion';
 
 const nodes = [
-  { x: '50%', y: '7%', delay: '0s' },
-  { x: '83%', y: '28%', delay: '-1.4s' },
-  { x: '87%', y: '70%', delay: '-2.8s' },
-  { x: '50%', y: '93%', delay: '-4.2s' },
-  { x: '13%', y: '70%', delay: '-5.6s' },
-  { x: '17%', y: '28%', delay: '-7s' },
+  { x: 300, y: 70, delay: '0s' },
+  { x: 498, y: 185, delay: '-1.4s' },
+  { x: 500, y: 415, delay: '-2.8s' },
+  { x: 300, y: 530, delay: '-4.2s' },
+  { x: 102, y: 415, delay: '-5.6s' },
+  { x: 102, y: 185, delay: '-7s' },
 ];
 
 export default function HeroVisual({ t }) {
@@ -34,12 +34,16 @@ export default function HeroVisual({ t }) {
         <path d="M300 70 L498 185 L500 415 L300 530 L102 415 L102 185 Z" />
         <path d="M300 70 L300 300 L498 185 M300 300 L500 415 M300 300 L300 530 M300 300 L102 415 M300 300 L102 185" />
         <circle cx="300" cy="300" r="170" />
+        <g className="network-nodes">
+          {nodes.map((node, index) => (
+            <g className="network-node" key={index} transform={`translate(${node.x} ${node.y})`} style={{ '--delay': node.delay }}>
+              <circle className="network-node-halo" r="19" vectorEffect="non-scaling-stroke" />
+              <circle className="network-node-ring" r="10" vectorEffect="non-scaling-stroke" />
+              <circle className="network-node-core" r="3.5" />
+            </g>
+          ))}
+        </g>
       </svg>
-      {nodes.map((node, index) => (
-        <span className="network-node" key={index} style={{ left: node.x, top: node.y, '--delay': node.delay }}>
-          <i />
-        </span>
-      ))}
 
       <div className="core-shell">
         <div className="core-scan" />

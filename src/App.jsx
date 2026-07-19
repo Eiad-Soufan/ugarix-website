@@ -7,15 +7,11 @@ import {
   Boxes,
   BrainCircuit,
   Building2,
-  Code2,
   ExternalLink,
-  LineChart,
   Mail,
   MapPin,
   Phone,
-  Scale,
   Smartphone,
-  Sparkles,
 } from 'lucide-react';
 import Header from './components/Header';
 import HeroVisual from './components/HeroVisual';
@@ -27,11 +23,14 @@ const iconMap = {
   boxes: Boxes,
   brain: BrainCircuit,
   mobile: Smartphone,
-  code: Code2,
-  scale: Scale,
-  chart: LineChart,
-  sparkles: Sparkles,
 };
+
+const disciplineVisuals = [
+  '/disciplines/engineering.webp',
+  '/disciplines/legal.webp',
+  '/disciplines/business.webp',
+  '/disciplines/design.webp',
+];
 
 function App() {
   const [locale, setLocale] = useState(() => localStorage.getItem('ugarix-locale') || 'ar');
@@ -255,17 +254,36 @@ function App() {
         </section>
 
         <section className="disciplines section">
+          <div className="disciplines-atmosphere" aria-hidden="true"><i /><i /><i /></div>
           <div className="container">
-            <SectionHeading eyebrow={t.disciplines.eyebrow} title={t.disciplines.title} intro={t.disciplines.intro} />
+            <div className="disciplines-head">
+              <SectionHeading eyebrow={t.disciplines.eyebrow} title={t.disciplines.title} intro={t.disciplines.intro} />
+              <Reveal className="disciplines-readout" delay={0.08} y={12}>
+                <span className="mono"><i />UG / QUAD-LENS</span>
+                <b className="mono">04</b>
+              </Reveal>
+            </div>
             <div className="discipline-grid">
-              {t.disciplines.items.map((item, index) => {
-                const Icon = iconMap[item.icon];
-                return (
-                  <Reveal className="discipline-card" delay={index * 0.07} key={item.title}>
-                    <span className="discipline-index mono">0{index + 1}</span><Icon /><h3>{item.title}</h3><p>{item.text}</p>
-                  </Reveal>
-                );
-              })}
+              {t.disciplines.items.map((item, index) => (
+                <Reveal className={`discipline-card discipline-card--${index + 1}`} delay={index * 0.07} key={item.title}>
+                  <article>
+                    <div className="discipline-card-top">
+                      <span className="discipline-index mono">0{index + 1}</span>
+                      <span className="discipline-lens mono"><i />LENS / 0{index + 1}</span>
+                    </div>
+                    <div className="discipline-visual" aria-hidden="true">
+                      <span className="discipline-orbit" />
+                      <img src={disciplineVisuals[index]} alt="" />
+                    </div>
+                    <div className="discipline-card-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </div>
+                    <span className="discipline-corner mono" aria-hidden="true">UG / 0{index + 1}</span>
+                  </article>
+                  <span className="discipline-node" aria-hidden="true"><i /></span>
+                </Reveal>
+              ))}
             </div>
           </div>
         </section>
