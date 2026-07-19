@@ -2,7 +2,7 @@
 
 The official bilingual website for **Ugarix Systems — أوغاريكس للأنظمة**.
 
-An immersive dark-theme React experience built around the Ugarix brand idea: **Engineered to Endure — أنظمة تُبنى لتبقى**.
+An immersive dark-theme React experience built around the Ugarix brand idea: **Engineering foundations for what comes next — نُهندسُ أساساً لِما لم يأتِ بعد**.
 
 ## Highlights
 

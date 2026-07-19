@@ -1,7 +1,7 @@
 export const content = {
   ar: {
-    metaTitle: 'Ugarix Systems | أنظمة تُبنى لتبقى',
-    metaDescription: 'أوغاريكس للأنظمة — نهندس أنظمة رقمية ذكية وآمنة وقابلة للتوسع، تُبنى لتبقى.',
+    metaTitle: 'Ugarix Systems | نُهندسُ أساساً لِما لم يأتِ بعد',
+    metaDescription: 'نحوّل الرؤية إلى أنظمة راسخة، تُدار بها الأعمال بثقة وتتوسّع دون أن تفقد صلابتها.',
     skip: 'انتقل إلى المحتوى',
     languageLabel: 'Switch to English',
     menuLabel: 'فتح القائمة',
@@ -16,9 +16,9 @@ export const content = {
     contactCta: 'ابدأ مشروعك',
     hero: {
       eyebrow: 'دمشق، سوريا — إلى العالم',
-      titleStart: 'أنظمةٌ تُبنى',
-      titleAccent: 'لتبقى.',
-      description: 'نهندس الأنظمة الرقمية التي تُدار بها المؤسسات وتدوم — بعمق هندسي، ونزاهة مطلقة، وشراكة لا تنتهي عند التسليم.',
+      titleStart: 'نُهندسُ أساساً',
+      titleAccent: 'لِما لم يأتِ بعد.',
+      description: 'نحوّل الرؤية إلى أنظمة راسخة، تُدار بها الأعمال بثقة وتتوسّع دون أن تفقد صلابتها.',
       primary: 'ابدأ مشروعك معنا',
       secondary: 'اكتشف منهجنا',
       scroll: 'استكشف أوغاريكس',
@@ -34,7 +34,7 @@ export const content = {
     ],
     story: {
       eyebrow: 'قصة العلامة',
-      title: 'من أبجدية أعادت هندسة الكتابة، إلى أنظمة تُبنى لتدوم.',
+      title: 'من أبجديةٍ منحت الفكر نظاماً،\nإلى هندسةٍ تمنح ما سيأتي أساسه.',
       lead: 'قبل أكثر من ثلاثة آلاف عام، لم تُخلَّد أوغاريت لأنها كتبت؛ خُلِّدت لأنها هندست طريقة الكتابة نفسها.',
       body: 'اليوم نبدأ من السؤال ذاته بصيغته الرقمية: في عالم أصبحت فيه البرمجيات متاحة للجميع، مَن يبني الأنظمة التي تبقى؟ نحن نحول الأفكار إلى معمارية، والمعمارية إلى أنظمة دقيقة وآمنة وقابلة للتوسع.',
       quote: 'من أرض أولى الأبجديات… أنظمةٌ للعالم.',
@@ -126,11 +126,11 @@ export const content = {
       direct: 'أو تواصل مباشرة',
       location: 'دمشق، سوريا · نعمل عالميًا',
     },
-    footer: { statement: 'أنظمة تُبنى لتبقى.', rights: 'جميع الحقوق محفوظة.', back: 'إلى الأعلى' },
+    footer: { statement: 'نُهندسُ أساساً لِما لم يأتِ بعد.', rights: 'جميع الحقوق محفوظة.', back: 'إلى الأعلى' },
   },
   en: {
-    metaTitle: 'Ugarix Systems | Engineered to Endure',
-    metaDescription: 'Ugarix Systems engineers intelligent, secure and scalable digital systems built to endure.',
+    metaTitle: 'Ugarix Systems | Engineering What Comes Next',
+    metaDescription: 'We turn vision into resilient systems businesses run on with confidence — built to scale without losing their integrity.',
     skip: 'Skip to content',
     languageLabel: 'التبديل إلى العربية',
     menuLabel: 'Open menu',
@@ -139,9 +139,9 @@ export const content = {
     contactCta: 'Start a project',
     hero: {
       eyebrow: 'Damascus, Syria — built for the world',
-      titleStart: 'Engineered',
-      titleAccent: 'to endure.',
-      description: 'We engineer the digital systems institutions run on — with technical depth, absolute integrity, and a partnership that continues beyond launch.',
+      titleStart: 'Engineering foundations',
+      titleAccent: 'for what comes next.',
+      description: 'We turn vision into resilient systems businesses run on with confidence — built to scale without losing their integrity.',
       primary: 'Build with Ugarix',
       secondary: 'Explore our method',
       scroll: 'Discover Ugarix',
@@ -157,7 +157,7 @@ export const content = {
     ],
     story: {
       eyebrow: 'Our origin',
-      title: 'From an alphabet that re-engineered writing, to systems designed to last.',
+      title: 'From an alphabet that gave thought its order,\nto engineering that gives the future its foundation.',
       lead: 'Over three thousand years ago, Ugarit was remembered not simply because it wrote — but because it engineered a new way to write.',
       body: 'Today we begin with the same question in digital form: in a world where software is available to everyone, who builds the systems that remain? We turn ideas into architecture, and architecture into precise, secure, scalable systems.',
       quote: 'From the land of early alphabets… systems for the world.',
@@ -242,6 +242,6 @@ export const content = {
       options: ['Enterprise system', 'Digital product', 'AI & automation', 'Web platform or mobile app'],
       direct: 'Or contact us directly', location: 'Damascus, Syria · Working globally',
     },
-    footer: { statement: 'Engineered to endure.', rights: 'All rights reserved.', back: 'Back to top' },
+    footer: { statement: 'Engineering foundations for what comes next.', rights: 'All rights reserved.', back: 'Back to top' },
   },
 };

@@ -268,6 +268,7 @@ html[dir='rtl'] .eyebrow {
 
 .section-heading h2,
 .trusted-heading h2 {
+  white-space: pre-line;
   margin-block: 1rem 1.35rem;
   font-size: clamp(2.35rem, 4.5vw, 4.8rem);
   font-weight: 500;
@@ -541,6 +542,10 @@ html[dir='rtl'] .header-cta {
   align-items: center;
   gap: clamp(24px, 4vw, 78px);
   grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .hero-copy h1 {
@@ -2291,7 +2296,7 @@ html[dir='rtl'] .form-wrap label > span { font-size: 0.82rem; }
   .header-cta { display: none; }
   .hero { padding-block: 145px 100px; }
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-copy { max-width: 720px; }
+  .hero-copy { width: 100%; max-width: 720px; }
   .hero-copy h1 { max-width: 680px; font-size: clamp(4.3rem, 13vw, 6.8rem); }
   html[dir='rtl'] .hero-copy h1 { font-size: clamp(4.1rem, 13vw, 6.5rem); }
   .system-visual { width: min(100%, 590px); margin-block-start: 55px; }
