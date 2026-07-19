@@ -1713,6 +1713,10 @@ html[dir='rtl'] .trusted-heading p {
   grid-template-columns: repeat(12, 1fr);
 }
 
+.trust-marquee {
+  position: relative;
+}
+
 .trust-grid::before {
   position: absolute;
   z-index: -1;
@@ -1729,6 +1733,10 @@ html[dir='rtl'] .trusted-heading p {
 .trust-card {
   --trust-accent: var(--green);
   grid-column: span 4;
+}
+
+.trust-card--clone {
+  display: none;
 }
 
 .trust-card:nth-child(4) {
@@ -2386,34 +2394,6 @@ html[dir='rtl'] .discipline-card p { font-size: 0.84rem; line-height: 1.85; }
   transform: translateY(12px);
 }
 
-.discipline-node {
-  position: absolute;
-  z-index: 4;
-  inset-inline-start: 50%;
-  inset-block-end: 0;
-  display: grid;
-  width: 21px;
-  height: 21px;
-  border: 1px solid rgba(164, 248, 218, 0.62);
-  border-radius: 50%;
-  background: #07110f;
-  box-shadow: 0 0 0 4px rgba(3, 218, 151, 0.055), 0 0 22px rgba(3, 218, 151, 0.16);
-  place-items: center;
-  transform: translateX(-50%);
-}
-
-html[dir='rtl'] .discipline-node {
-  transform: translateX(50%);
-}
-
-.discipline-node i {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--green-soft);
-  box-shadow: 0 0 12px var(--green);
-}
-
 .disciplines-atmosphere,
 .disciplines-atmosphere i {
   position: absolute;
@@ -2468,11 +2448,13 @@ html[dir='rtl'] .discipline-node {
 
 .direct-contact a,
 .direct-contact p {
-  display: flex;
-  width: max-content;
+  display: grid;
+  width: fit-content;
   max-width: 100%;
   margin: 0;
   align-items: center;
+  justify-self: start;
+  grid-template-columns: 18px minmax(0, 1fr);
   gap: 11px;
   color: #c7d4d1;
   font-size: 0.84rem;
@@ -2481,9 +2463,22 @@ html[dir='rtl'] .discipline-node {
 html[dir='rtl'] .direct-contact a,
 html[dir='rtl'] .direct-contact p { font-size: 0.96rem; }
 
-.direct-contact svg {
+.direct-contact-icon {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+}
+
+.direct-contact-icon svg {
   width: 16px;
+  height: 16px;
   color: var(--green);
+}
+
+.direct-contact-value[dir='ltr'] {
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 
 .direct-contact a:hover {
@@ -2693,7 +2688,7 @@ html[dir='rtl'] .form-wrap label > span { font-size: 0.82rem; }
   .service-card-layout { grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr); }
   .service-visual img { max-width: 365px; }
   .discipline-grid { padding-block-end: 0; grid-template-columns: repeat(2, 1fr); }
-  .discipline-grid::after, .discipline-node { display: none; }
+  .discipline-grid::after { display: none; }
   .discipline-card article { min-height: 500px; }
   .discipline-visual { min-height: 295px; }
   .process-rail { gap: 12px; }
@@ -2830,24 +2825,34 @@ html[dir='rtl'] .form-wrap label > span { font-size: 0.82rem; }
   .trusted-heading p { font-size: 0.94rem; }
   html[dir='rtl'] .trusted-heading p { font-size: 1rem; }
   .trust-signal { min-width: 140px; }
+  .trust-marquee {
+    width: 100%;
+    overflow: hidden;
+    direction: ltr;
+    mask-image: linear-gradient(90deg, transparent, black 4%, black 96%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 4%, black 96%, transparent);
+  }
   .trust-grid {
     display: flex;
-    padding: 8px 16px 25px;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scroll-padding-inline: 16px;
-    scroll-snap-type: inline mandatory;
-    scrollbar-width: none;
+    width: max-content;
+    padding: 8px 0 25px;
+    overflow: visible;
+    gap: 14px;
+    direction: ltr;
+    animation: trust-marquee 34s linear infinite;
+    will-change: transform;
   }
-  .trust-grid::-webkit-scrollbar { display: none; }
   .trust-card,
   .trust-card:nth-child(4),
-  .trust-card:nth-child(5) {
+  .trust-card:nth-child(5),
+  .trust-card--clone {
+    display: block;
     width: auto;
     max-width: none;
     flex: 0 0 min(84vw, 340px);
-    scroll-snap-align: center;
+    grid-column: auto;
   }
+  html[dir='rtl'] .trust-card article { direction: rtl; }
   .trust-card article { min-height: 365px; }
   .trust-logo-stage { min-height: 235px; }
   .trust-card-bottom h3 { max-width: 210px; }
@@ -2877,6 +2882,14 @@ html[dir='rtl'] .form-wrap label > span { font-size: 0.82rem; }
   .cursor-light { display: none; }
 }
 
+@media (hover: hover) and (max-width: 620px) {
+  .trust-marquee:hover .trust-grid { animation-play-state: paused; }
+}
+
+@keyframes trust-marquee {
+  to { transform: translate3d(calc(-50% - 7px), 0, 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -2885,4 +2898,14 @@ html[dir='rtl'] .form-wrap label > span { font-size: 0.82rem; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .trust-marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .trust-grid {
+    animation: none !important;
+    transform: none !important;
+  }
+  .trust-card--clone { display: none; }
 }

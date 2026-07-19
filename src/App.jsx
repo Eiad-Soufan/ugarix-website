@@ -28,6 +28,35 @@ const disciplineVisuals = [
   '/disciplines/design.webp',
 ];
 
+function TrustCard({ item, index, clone = false }) {
+  const card = (
+    <article>
+      <div className="trust-card-top">
+        <span className="mono">UG / {item.number}</span>
+        <span className="trust-live"><i />VERIFIED</span>
+      </div>
+      <div className="trust-logo-stage">
+        <span className="trust-orbit" aria-hidden="true" />
+        <div className="trust-logo-crop"><img src={item.logo} alt={clone ? '' : `${item.name} logo`} /></div>
+      </div>
+      <div className="trust-card-bottom">
+        <div><span>{item.sector}</span><h3>{item.name}</h3></div>
+        <span className="mono">0{index + 1} / 05</span>
+      </div>
+    </article>
+  );
+
+  if (clone) {
+    return <div className={`trust-card trust-card--${item.tone} trust-card--clone`} aria-hidden="true">{card}</div>;
+  }
+
+  return (
+    <Reveal className={`trust-card trust-card--${item.tone}`} delay={index * 0.06}>
+      {card}
+    </Reveal>
+  );
+}
+
 function App() {
   const [locale, setLocale] = useState(() => localStorage.getItem('ugarix-locale') || 'ar');
   const t = content[locale];
@@ -207,25 +236,15 @@ function App() {
               <span className="trust-signal mono"><i />{t.trusted.signal}<b>05</b></span>
             </Reveal>
 
-            <div className="trust-grid">
-              {t.trusted.items.map((item, index) => (
-                <Reveal className={`trust-card trust-card--${item.tone}`} delay={index * 0.06} key={item.name}>
-                  <article>
-                    <div className="trust-card-top">
-                      <span className="mono">UG / {item.number}</span>
-                      <span className="trust-live"><i />VERIFIED</span>
-                    </div>
-                    <div className="trust-logo-stage">
-                      <span className="trust-orbit" aria-hidden="true" />
-                      <div className="trust-logo-crop"><img src={item.logo} alt={`${item.name} logo`} /></div>
-                    </div>
-                    <div className="trust-card-bottom">
-                      <div><span>{item.sector}</span><h3>{item.name}</h3></div>
-                      <span className="mono">0{index + 1} / 05</span>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
+            <div className="trust-marquee">
+              <div className="trust-grid">
+                {t.trusted.items.map((item, index) => (
+                  <TrustCard item={item} index={index} key={item.name} />
+                ))}
+                {t.trusted.items.map((item, index) => (
+                  <TrustCard item={item} index={index} clone key={`clone-${item.name}`} />
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -288,7 +307,6 @@ function App() {
                     </div>
                     <span className="discipline-corner mono" aria-hidden="true">UG / 0{index + 1}</span>
                   </article>
-                  <span className="discipline-node" aria-hidden="true"><i /></span>
                 </Reveal>
               ))}
             </div>
@@ -302,9 +320,18 @@ function App() {
               <SectionHeading eyebrow={t.contact.eyebrow} title={t.contact.title} intro={t.contact.text} />
               <Reveal className="direct-contact" delay={0.12}>
                 <span>{t.contact.direct}</span>
-                <a href="mailto:ugarixsystems@gmail.com"><Mail />ugarixsystems@gmail.com</a>
-                <a href="tel:+963938688397" dir="ltr"><Phone />+963 938 688 397</a>
-                <p><MapPin />{t.contact.location}</p>
+                <a href="mailto:ugarixsystems@gmail.com">
+                  <span className="direct-contact-icon"><Mail /></span>
+                  <span className="direct-contact-value" dir="ltr">ugarixsystems@gmail.com</span>
+                </a>
+                <a href="tel:+963938688397">
+                  <span className="direct-contact-icon"><Phone /></span>
+                  <span className="direct-contact-value" dir="ltr">+963 938 688 397</span>
+                </a>
+                <p>
+                  <span className="direct-contact-icon"><MapPin /></span>
+                  <span className="direct-contact-value">{t.contact.location}</span>
+                </p>
               </Reveal>
             </div>
             <Reveal className="form-wrap" delay={0.12} y={18}>
