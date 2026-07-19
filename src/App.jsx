@@ -63,6 +63,7 @@ function App() {
 
       <main id="main">
         <section className="hero" id="home">
+          <div className="hero-backdrop" aria-hidden="true" />
           <div className="hero-aurora" aria-hidden="true" />
           <div className="container hero-grid">
             <div className="hero-copy">
