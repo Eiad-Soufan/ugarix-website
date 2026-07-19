@@ -4,10 +4,15 @@ import {
   ArrowDown,
   ArrowUp,
   ArrowUpRight,
+  Check,
+  Coffee,
   ExternalLink,
+  Luggage,
   Mail,
   MapPin,
   Phone,
+  Scale,
+  Sprout,
 } from 'lucide-react';
 import Header from './components/Header';
 import HeroVisual from './components/HeroVisual';
@@ -27,6 +32,8 @@ const disciplineVisuals = [
   '/disciplines/business.webp',
   '/disciplines/design.webp',
 ];
+
+const projectIcons = [Scale, Coffee, Sprout, Luggage];
 
 function TrustCard({ item, index, clone = false }) {
   const card = (
@@ -206,20 +213,30 @@ function App() {
           <div className="container">
             <SectionHeading eyebrow={t.work.eyebrow} title={t.work.title} intro={t.work.intro} />
             <div className="work-list">
-              {t.work.items.map((project, index) => (
-                <Reveal className={`project-card project-card--${project.color}`} delay={index * 0.06} key={project.name}>
-                  <a href={project.url} target="_blank" rel="noreferrer" aria-label={`${t.work.view}: ${project.name}`}>
-                    <div className="project-meta"><span className="mono">{project.number}</span><span>{project.type}</span></div>
-                    <div className="project-main"><h3>{project.name}</h3><p>{project.description}</p></div>
-                    <div className="project-visual" aria-hidden="true">
-                      <div className="project-grid-lines" />
-                      <span><b>{project.mark}</b></span>
-                      <i /><i /><i />
-                    </div>
-                    <div className="project-link"><span>{t.work.view}</span><ExternalLink /></div>
-                  </a>
-                </Reveal>
-              ))}
+              {t.work.items.map((project, index) => {
+                const ProjectIcon = projectIcons[index];
+                return (
+                  <Reveal className={`project-card project-card--${project.color}`} delay={index * 0.06} key={project.name}>
+                    <a href={project.url} target="_blank" rel="noreferrer" aria-label={`${t.work.view}: ${project.name}`}>
+                      <span className="project-ghost-number mono" aria-hidden="true">{project.number}</span>
+                      <div className="project-card-head">
+                        <span className="project-number mono">UG / {project.number}</span>
+                        <span className="project-icon" aria-hidden="true"><ProjectIcon /></span>
+                      </div>
+                      <div className="project-main">
+                        <span className="project-type mono">{project.type}</span>
+                        <h3>{project.name}</h3>
+                        <p>{project.description}</p>
+                      </div>
+                      <ul className="project-features">
+                        {project.features.map(feature => <li key={feature}><Check />{feature}</li>)}
+                      </ul>
+                      <div className="project-tags">{project.tags.map(tag => <span className="mono" key={tag}>{tag}</span>)}</div>
+                      <div className="project-link"><span>{t.work.view}</span><ExternalLink /></div>
+                    </a>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>
