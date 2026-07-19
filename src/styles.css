@@ -903,19 +903,6 @@ html[dir='rtl'] .network-node {
   transform: rotate(45deg);
 }
 
-.core-shell::before,
-.core-shell::after {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  content: '';
-  border-color: var(--green);
-  opacity: 0.7;
-}
-
-.core-shell::before { inset-block-start: 8px; inset-inline-start: 8px; border-block-start: 1px solid; border-inline-start: 1px solid; }
-.core-shell::after { inset-block-end: 8px; inset-inline-end: 8px; border-block-end: 1px solid; border-inline-end: 1px solid; }
-
 .core-mark {
   width: 66px;
   transform: rotate(-45deg);
